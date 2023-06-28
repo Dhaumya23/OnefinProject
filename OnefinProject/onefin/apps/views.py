@@ -51,7 +51,7 @@ class MovieAPIView(APIView):
     def get(self, request):
         page = "?page=" + \
             request.GET.get('page') if request.GET.get('page') else ''
-        cur_url = reverse('api:movie_api', request=request)
+        currurl = reverse('api:movie_api', request=request)
         response = requests.get('https://demo.credy.in/api/v1/maya/movies/' +
                                 page,
                                 auth=(settings.API_USERNAME,
@@ -59,11 +59,11 @@ class MovieAPIView(APIView):
                                 )
         response_obj = response.json()
         response_obj['next'] = response_obj['next'].replace(
-            'https://demo.credy.in/api/v1/maya/movies/', cur_url) \
+            'https://demo.credy.in/api/v1/maya/movies/', currurl) \
             if 'next' in response_obj and response_obj['next'] \
             else None
         response_obj['previous'] = response_obj['previous'].replace(
-            'https://demo.credy.in/api/v1/maya/movies/', cur_url) \
+            'https://demo.credy.in/api/v1/maya/movies/', currurl) \
             if 'previous' in response_obj and response_obj['previous'] \
             else None
         return Response(response_obj)
