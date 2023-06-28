@@ -10,7 +10,7 @@ class RegistrationSerializer(serializers.ModelSerializer):
         fields = ["username", "password"]
 
     def create(self, validated_data):
-        # Use the `create_user` method we wrote earlier to create a new user.
+        # Using the `create_user` method which was written earlier to create a new user.
         user = User.objects.create_user(**validated_data)
         user.set_password(validated_data.get('password'))
         return user
