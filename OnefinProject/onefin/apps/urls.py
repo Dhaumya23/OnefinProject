@@ -7,7 +7,7 @@ from rest_framework import routers
 
 app_name = "apps"
 
-# The API URLs are now determined automatically by the router.
+# API URLs are now determined automatically by the router.
 
 router = routers.SimpleRouter()
 router.register('api/register', RegistrationAPIViewset)
