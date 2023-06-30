@@ -2,7 +2,6 @@
 
 ## Installation instructions
 
-> Use latest version of Python and Django with Django Rest Framework
 
 ```bash
 cd onefin/
