@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:onefin}/db.sqlite3",
+            "name": "onefin"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
