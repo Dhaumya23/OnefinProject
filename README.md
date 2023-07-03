@@ -1,1 +1,1 @@
-Onefin backend assignment based on Django framework.
+Onefin backend assignment based on Django.
